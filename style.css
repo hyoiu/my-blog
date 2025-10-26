@@ -1,0 +1,327 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: #f8f9fb;
+    color: #333;
+}
+
+
+header {
+    background: #007acc;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+nav a:hover,
+nav a.active {
+    color: #fcd703; /* warm yellow accent */
+}
+
+header h1 a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.post {
+    background: white;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.post h2 a {
+    color: #333;
+    text-decoration: none;
+}
+
+.post h2 a:hover {
+    color: #007acc;
+}
+
+.date {
+    color: #777;
+    font-size: 0.9rem;
+}
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #007acc;
+    color: white;
+    margin-top: 3rem;
+}
+/* Navigation bar */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a.active {
+    color: #007acc;
+}
+
+/* About page */
+.about {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: 2rem auto;
+}
+/* Layout using Flexbox */
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 2rem auto;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+/* Main section takes 70%, sidebar 30% */
+main {
+    flex: 2;
+}
+
+.sidebar {
+    flex: 1;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Profile section */
+.profile {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+/* Recent posts list */
+.recent-posts ul {
+    list-style: none;
+    padding: 0;
+}
+
+.recent-posts ul li {
+    margin-bottom: 0.5rem;
+}
+
+.recent-posts ul li a {
+    text-decoration: none;
+    color: #007acc;
+}
+
+.recent-posts ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Post images */
+.post-img {
+    width: 100%;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
+/* Smooth hover transitions */
+a, .post, .profile-pic {
+    transition: all 0.3s ease;
+}
+
+/* Hover effects for post cards */
+.post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+/* Hover on nav links */
+nav a:hover {
+    color: #fcd703;
+    text-decoration: underline;
+}
+
+/* Hover on profile image */
+.profile-pic:hover {
+    transform: scale(1.05);
+}
+/* Responsive layout for mobile screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+
+    header {
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.8rem;
+        padding: 0;
+    }
+
+    main {
+        order: 1;
+    }
+
+    .sidebar {
+        order: 2;
+        margin-top: 2rem;
+    }
+
+    .post {
+        margin-bottom: 1.5rem;
+    }
+}
+.post h2 a:hover {
+    color: #005f99;
+    text-decoration: underline;
+}
+
+.recent-posts a:hover {
+    color: #005f99;
+}
+/* Contact Page Styles */
+.contact {
+    background: white;
+    padding: 2rem;
+    max-width: 700px;
+    margin: 2rem auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #007acc;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-top: 0.5rem;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #007acc;
+    box-shadow: 0 0 4px rgba(0,122,204,0.3);
+}
+
+.contact-form button {
+    margin-top: 1.5rem;
+    padding: 0.9rem;
+    border: none;
+    background: #007acc;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #005f99;
+}
+/* Comment form styles */
+.comments {
+    background: white;
+    padding: 1.5rem;
+    max-width: 700px;
+    margin: 2rem auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.comments h3 {
+    color: #007acc;
+    margin-bottom: 1rem;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-form label {
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+.comment-form input,
+.comment-form textarea {
+    margin-top: 0.5rem;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.comment-form button {
+    margin-top: 1.5rem;
+    padding: 0.9rem;
+    border: none;
+    background: #007acc;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.comment-form button:hover {
+    background: #005f99;
+}
+
